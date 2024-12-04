@@ -1,0 +1,768 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.main-image {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    border-radius: 8px; 
+}
+
+
+.info-text {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .main-image {
+        width: 100%; 
+
+    .info-text {
+        width: 100%;
+    }
+}
+}
+.info-text h2 {
+    font-size: 24px;
+    color: red;
+}
+
+.info-text p, .info-text ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.news-container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-container h2 {
+    font-size: 24px;
+    color: blue;
+}
+
+.news-container ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    margin: 0;    
+    list-style: none;
+}
+
+.news-container ul li {
+    margin-bottom: 10px;
+}
+.team {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.team span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.team-roster {
+    list-style-type: disc;
+    padding-left: 60px; 
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.match-list {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+в таблицы */
+.standings-table th {
+    background-color:rgba(26, 11, 234, 0.7); 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+  }
+  
+  table, th, td {
+    border: 1px solid #333;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+.matches-and-image {
+    display: flex;
+    gap: 0px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.match-list-container {
+    flex: 2;
+}
+
+
+.sidebar {
+    flex: 2;
+}
+
+.sidebar-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-form, .feedback-form {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.ticket-form label, .feedback-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.ticket-form input, .ticket-form select,
+.feedback-form input, .feedback-form select, .feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-field1111 {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button111 {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: darkblue;
+}
+
+
+.navigation-container h3 {
+  text-align: center;  
+  font-size: 24px;     
+  color: #ffffff;      
+  background-color: #333333; 
+  padding: 10px;       
+  border-radius: 8px;  
+  margin-bottom: 15px; 
+}
+
+
+.navigation-container ul {
+  display: flex;                         
+  flex-wrap: wrap;                        
+  justify-content: space-between;         
+  padding: 0;
+  list-style: none;
+}
+
+
+.navigation-container ul li {
+  width: calc(25% - 10px); 
+  margin-bottom: 10px;     
+}
+
+
+.navigation-container ul li a {
+    display: block;
+    padding: 6px 15px;             
+    background-color: #f44336;      
+    color: white;                   
+    text-decoration: none;          
+    font-size: 16px;                
+    text-align: center;             
+    border-radius: 8px;             
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 20px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.product img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    min-height: 40px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+.product p {
+    margin: 5px 0;
+    min-height: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.product input {
+    width: 50px;
+    margin-top: 10px;
+}
+
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product:hover .description {
+    opacity: 1;
+}
+
+
+.team {
+    margin-top: 50px;
+}
+.team {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.team-roster {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .team-roster {
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .team-logo {
+        max-width: 90%;
+    }
+
+    .team h2 {
+        font-size: 1.2em;
+    }
+
+    .team-roster {
+        font-size: 0.8em;
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-text h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.matches-and-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.match-list-container,
+.sidebar {
+    flex: 1 1 45%;
+}
+
+.match-list-container {
+    max-width: 600px;
+}
+
+.match-list {
+    list-style: none;
+    padding: 0;
+}
+
+.match-list li {
+    margin: 10px 0;
+}
+
+.sidebar-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.standings-table th,
+.standings-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.standings-table th {
+    background-color: #333;
+    color: white;
+}
+
+.standings-table img {
+    max-height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+    .matches-and-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .match-list-container,
+    .sidebar {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .standings-table {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .standings-table img {
+        display: none;
+    }
+
+    .standings-table th,
+    .standings-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+.ticket-form, .feedback-form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.ticket-form label,
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.ticket-form input,
+.feedback-form input,
+.ticket-form select,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ticket-form button,
+.feedback-form button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ticket-form button:hover,
+.feedback-form button:hover {
+    background-color: blue;
+}
+
+/* Список навигации */
+.navigation-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.navigation-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-container ul li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .ticket-form, .feedback-form {
+        padding: 15px;
+    }
+
+    .ticket-form button,
+    .feedback-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+    }
+
+    .ticket-form label,
+    .feedback-form label {
+        font-size: 14px;
+    }
+
+    .ticket-form input,
+    .feedback-form input,
+    .ticket-form select,
+    .feedback-form select,
+    .feedback-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: blue;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: darkblue;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: black;
+}
+
+.cart-btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-btn:hover {
+    background-color: blue;
+}
+
+footer {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .cart-btn {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product {
+        padding: 8px;
+    }
+
+    .cart-btn {
+        width: 100%;
+    }
+}

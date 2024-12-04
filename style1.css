@@ -1,0 +1,186 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Основное содержимое */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Навигация */
+.navigation-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-text h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.team-roster {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Адаптация под маленькие экраны */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .team-roster {
+        font-size: 0.9em;
+    }
+}
+
+/* Адаптация под очень маленькие экраны */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .team-logo {
+        max-width: 90%;
+    }
+
+    .team h2 {
+        font-size: 1.2em;
+    }
+
+    .team-roster {
+        font-size: 0.8em;
+    }
+}

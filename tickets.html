@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Купить билеты - Хоккейный турнир "Победа"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="teams.html">Команды</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="tickets.html" class="active">Купить билеты</a></li>
+            <li><a href="https://www.kinopoisk.ru/" target="_blank">Трансляция на КиноПоиске</a></li>
+            <li><a href="shop.html">Товары для болельщиков</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Купить билеты на матч</h1>
+        <form id="ticketForm" class="ticket-form" onsubmit="handleTicketFormSubmit(event)">
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Адрес электронной почты:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="match">Выберите матч:</label>
+            <select id="match" name="match" required>
+                <option value="ЦСКА vs СКА">ЦСКА vs СКА</option>
+                <option value="Динамо vs Спартак">Динамо vs Спартак</option>
+                <option value="ЦСКА vs Динамо">ЦСКА vs Динамо</option>
+                <option value="СКА vs Спартак">СКА vs Спартак</option>
+            </select>
+
+            <button type="submit">Купить билет</button>
+        </form>
+
+        <h2>Оставить отзыв о турнире</h2>
+        <form id="feedbackForm" class="feedback-form" onsubmit="handleFeedbackFormSubmit(event)">
+            <label for="attended">Вы были на матче?</label>
+            <select id="attended" name="attended" required>
+                <option value="да">Да</option>
+                <option value="нет">Нет</option>
+            </select>
+
+            <label for="date">Дата обращения:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="improvements">Что нужно добавить турниру, чтобы стать лучше?</label>
+            <textarea id="improvements" name="improvements" rows="4" required></textarea>
+
+            <label for="satisfaction">Удовлетворены ли вы матчем?</label>
+            <select id="satisfaction" name="satisfaction" required>
+                <option value="да">Да</option>
+                <option value="нет">Нет</option>
+            </select>
+
+            <label for="rating">Оцените работу сайта (0-5):</label>
+            <select id="rating" name="rating" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <button type="submit">Отправить отзыв</button>
+        </form>
+        <div class="navigation-container">
+            <h3>Навигация по странице</h3>
+            <ul class="list-unstyled">
+              <li><a href="sponsors.html">Спонсоры</a></li>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="teams.html">Команды</a></li>
+              <li><a href="schedule.html">Расписание</a></li>
+              <li><a href="tickets.html">Купить билеты</a></li>
+              <li><a href="https://www.kinopoisk.ru/" target="_blank">Трансляция на КионоПоиске</a></li>
+              <li><a href="shop.html">Магазин</a></li>
+              <li><a href="#top">К началу страницы</a></li>
+            </ul>
+          </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Хоккейный турнир "Победа" — Все права защищены</p>
+    </footer>
+
+    <script>
+        function handleTicketFormSubmit(event) {
+            event.preventDefault();
+
+        
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const match = document.getElementById('match').value;
+
+        
+            const url = `https://www.khl.ru/?fullName=${encodeURIComponent(fullName)}&phone=${encodeURIComponent(phone)}&email=${encodeURIComponent(email)}&match=${encodeURIComponent(match)}`;
+            
+            
+            window.location.href = url;
+        }
+
+        function handleFeedbackFormSubmit(event) {
+            event.preventDefault();
+
+
+            const attended = document.getElementById('attended').value;
+            const date = document.getElementById('date').value;
+            const improvements = document.getElementById('improvements').value;
+            const satisfaction = document.getElementById('satisfaction').value;
+            const rating = document.getElementById('rating').value;
+
+            
+            const url = `https://www.khl.ru/?attended=${encodeURIComponent(attended)}&date=${encodeURIComponent(date)}&improvements=${encodeURIComponent(improvements)}&satisfaction=${encodeURIComponent(satisfaction)}&rating=${encodeURIComponent(rating)}`;
+            
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

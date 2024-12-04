@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары для болельщиков - Хоккейный турнир "Победа"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="teams.html">Команды</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="tickets.html">Купить билеты</a></li>
+            <li><a href="https://www.kinopoisk.ru/" target="_blank">Трансляция на КиноПоиске</a></li>
+            <li><a href="shop.html" class="active">Товары для болельщиков</a></li>
+        </ul>
+    </nav>
+
+    <h1>Наши товары</h1>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="ШарфСпартак.png" alt="Шарф ХК ЦСКА">
+            <h2>Шарф ХК Спартак</h2>
+            <p>Цена: 1500 руб.</p>
+            <div class="description">Качественный шарф с логотипом команды</div>
+            Количество: <input type="number" id="product1-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="ШапкаДинамо.png" alt="2">
+            <h2>Шапка ХК Динамо</h2>
+            <p>Цена: 1800 руб.</p>
+            <div class="description">Качественная шапка с логотипом команды</div>
+            Количество: <input type="number" id="product2-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="МайкаЦСКА.png" alt="3">
+            <h2>Майка ХК ЦСКА</h2>
+            <p>Цена: 4500 руб.</p>
+            <div class="description">Качественная майка с логотипом команды</div>
+            Количество: <input type="number" id="product3-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="КепкаСКА.png" alt="Кепка ХК СКА">
+            <h2>Кепка ХК СКА</h2>
+            <p>Цена: 1700 руб.</p>
+            <div class="description">Качественная кепка с логотипом команды</div>
+            Количество: <input type="number" id="product4-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="ШарфДинамо.png" alt="Шарф ХК Динамо">
+            <h2>Шарф ХК Динамо</h2>
+            <p>Цена: 1500 руб.</p>
+            <div class="description">Качественный шарф с логотипом команды</div>
+            Количество: <input type="number" id="product5-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="МайкаСКА.png" alt="Майка ХК СКА">
+            <h2>Майка ХК СКА</h2>
+            <p>Цена: 4500 руб.</p>
+            <div class="description">Качественная майка с логотипом команды</div>
+            Количество: <input type="number" id="product6-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="КепкаСпартак.png" alt="Кепка ХК Спартак">
+            <h2>Кепка ХК Спартак</h2>
+            <p>Цена: 2500 руб.</p>
+            <div class="description">Качественная кепка с логотипом команды</div>
+            Количество: <input type="number" id="product7-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="КепкаДинамо.png" alt="Кепка ХК Динамо">
+            <h2>Кепка ХК Динамо</h2>
+            <p>Цена: 1700 руб.</p>
+            <div class="description">Качественная кепка с логотипом команды</div>
+            Количество: <input type="number" id="product8-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="ШапкаЦСКА.png" alt="Шапка ХК ЦСКА">
+            <h2>Шапка ХК ЦСКА</h2>
+            <p>Цена: 1800 руб.</p>
+            <div class="description">Качественная шапка с логотипом команды</div>
+            Количество: <input type="number" id="product9-quantity" value="0" min="0">
+        </div>
+        <div class="product">
+            <img src="МайкаСпартак.png" alt="Майка ХК Спартак">
+            <h2>Майка ХК Спартак</h2>
+            <p>Цена: 4500 руб.</p>
+            <div class="description">Качественная майка с логотипом команды</div>
+            Количество: <input type="number" id="product10-quantity" value="0" min="0">
+        </div>
+    </div>
+
+    <div class="cart-btn-container">
+        <button class="cart-btn" onclick="goToCart()">Перейти в корзину</button>
+    </div>
+
+    <footer>
+        © 2024 Хоккейный турнир "Победа". Все права защищены.
+    </footer>
+
+    <script>
+        function goToCart() {
+            const productQuantities = [];
+            for (let i = 1; i <= 10; i++) {
+                const quantity = document.getElementById(`product${i}-quantity`)?.value;
+                if (quantity > 0) {
+                    productQuantities.push(`product${i}=${quantity}`);
+                }
+            }
+
+            const cartUrl = 'https://shop.atributika.ru/' + productQuantities.join('&');
+            window.location.href = cartUrl;
+        }
+    </script>
+</body>
+</html>
