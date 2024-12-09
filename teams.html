@@ -2,42 +2,134 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Команды - Хоккейный турнир "Победа"</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: blue;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .team-logo {
+            max-width: 150px;
+            margin: 0 auto 10px auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        .team-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .team-card h2 {
+            color: blue;
+            cursor: pointer;
+        }
+
+        /* Стили кнопок для перехода к составам */
+        .top-navigation {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .top-navigation a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .top-navigation a:hover {
+            background-color: darkred;
+        }
+
+        /* Нижняя навигация */
+        .bottom-navigation {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bottom-navigation .btn {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="teams.html" class="active">Команды</a></li>
-            <li><a href="schedule.html">Расписание</a></li>
-            <li><a href="tickets.html">Купить билеты</a></li>
-            <li><a href="https://www.kinopoisk.ru/" target="_blank">Трансляция на КиноПоиске</a></li>
-            <li><a href="shop.html">Товары для болельщиков</a></li>
-        </ul>
+    <!-- Верхняя навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Турнир "Победа"</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="teams.html">Команды</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">Расписание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tickets.html">Купить билеты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.kinopoisk.ru/" target="_blank">Трансляция</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Товары</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <h1>Команды:</h1>
+    <!-- Кнопки для перехода к составам -->
+    <div class="container top-navigation">
+        <a href="#cska">ЦСКА</a>
+        <a href="#spartak">Спартак</a>
+        <a href="#ska">СКА</a>
+        <a href="#dynamo">Динамо</a>
+    </div>
 
-        <div class="navigation-container">
-            <h3>Составы команд</h3>
-            <ul>
-                <li><a href="#cska">ЦСКА</a></li>
-                <li><a href="#spartak">Спартак</a></li>
-                <li><a href="#dynamo">Динамо</a></li>
-                <li><a href="#ska">СКА</a></li>
-            </ul>
-        </div>
+    <!-- Основной контент -->
+    <main class="container mt-4">
+        <h1 class="text-center mb-4">Составы команд:</h1>
 
-        
-        <div id="cska" class="team">
+        <div id="cska" class="team-card">
             <a href="https://t.me/cska_hockey" target="_blank">
                 <img src="ЦСКА.png" alt="Эмблема ЦСКА" class="team-logo">
-                <h2>Команда «ЦСКА»</h2>
             </a>
-            <ul class="team-roster">
+            <a href="https://t.me/cska_hockey" target="_blank">
+                <h2>ЦСКА</h2>
+            </a>
+            <ul>
                 <li>Абрамов Виталий 11, нападающий</li>
                 <li>Гамзин Дмитрий 33, вратарь</li>
                 <li>Гурьянов Денис 34, нападающий</li>
@@ -65,12 +157,14 @@
             </ul>
         </div>
 
-        <div id="spartak" class="team">
+        <div id="spartak" class="team-card">
             <a href="https://t.me/hc_spartak" target="_blank">
                 <img src="Спартак.png" alt="Эмблема Спартак" class="team-logo">
-                <h2>Команда «Спартак»</h2>
             </a>
-            <ul class="team-roster">
+            <a href="https://t.me/hc_spartak" target="_blank">
+                <h2>Спартак</h2>
+            </a>
+            <ul>
                 <li>Уильям Биттен 41, нападающий</li>
                 <li>Роман Бычков 78, защитник</li>
                 <li>Вишневский Дмитрий 55, защитник</li>
@@ -102,47 +196,14 @@
             </ul>
         </div>
 
-        <div id="dynamo" class="team">
-            <a href="https://t.me/dynamo_ru" target="_blank">
-                <img src="Динамо.jpg" alt="Эмблема Динамо" class="team-logo">
-                <h2>Команда «Динамо»</h2>
-            </a>
-            <ul class="team-roster">
-                <li>Адамчук Кирилл 44, защитник</li>
-                <li>Буруянов Никита 20, нападающий</li>
-                <li>Готовец Кирилл 41, защитник</li>
-                <li>Гусев Никита 97, нападающий</li>
-                <li>Гуськов Матвей 37, нападающий</li>
-                <li>Джиошвили Максим 7, нападающий</li>
-                <li>Ильенко Артём 34, нападающий</li>
-                <li>Комтуа Максим 10, нападающий</li>
-                <li>Кудашов Артём 23, защитник</li>
-                <li>Кудрявцев Павел 84, защитник</li>
-                <li>Менелл Бреннан 27, защитник</li>
-                <li>Миска Хантер 35, вратарь</li>
-                <li>Михеев Артём 13, нападающий</li>
-                <li>Моторыгин Максим 99, вратарь</li>
-                <li>О'Дэлл Эрик 19, нападающий</li>
-                <li>Ожиганов Игорь 92, защитник</li>
-                <li>Пакетт Седрик 18, нападающий</li>
-                <li>Пыленков Даниил 45, защитник</li>
-                <li>Рашевский Дмитрий 96, нападающий</li>
-                <li>Римашевский Егор 87, нападающий</li>
-                <li>Сергеев Егор 93, защитник</li>
-                <li>Сизов Антон 36, защитник</li>
-                <li>Уил Джордан 91, нападающий</li>
-                <li>Ханин Макар 86, нападающий</li>
-                <li>Швец-Роговой Артём 57, нападающий</li>
-                <li>Кудашов Алексей Николаевич, главный тренер</li>
-            </ul>
-        </div>
-
-        <div id="ska" class="team">
+        <div id="ska" class="team-card">
             <a href="https://t.me/hcska" target="_blank">
                 <img src="СКА.jpeg" alt="Эмблема СКА" class="team-logo">
-                <h2>Команда «СКА»</h2>
             </a>
-            <ul class="team-roster">
+            <a href="https://t.me/hcska" target="_blank">
+                <h2>СКА</h2>
+            </a>
+            <ul>
                 <li>Алистов Владимир 72, нападающий</li>
                 <li>Андронов Сергей 11, нападающий</li>
                 <li>Бардаков Захар 70, нападающий</li>
@@ -173,29 +234,61 @@
                 <li>Толчинский Сергей 28, нападающий</li>
                 <li>Фалькович Степан 77, защитник</li>
                 <li>Хайруллин Марат 61, нападающий</li>
-                <li>Ротенберг Роман Борисович, главный тренер</li>
+                <li>Ротенберг Роман Борисович, главный тренер</li> 
             </ul>
         </div>
 
-        <p>Следите за новостями, чтобы узнать больше о каждом игроке и составе команд.</p>
-        <div class="navigation-container">
-            <h3>Навигация по странице</h3>
-            <ul class="list-unstyled">
-              <li><a href="sponsors.html">Спонсоры</a></li>
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="teams.html">Команды</a></li>
-              <li><a href="schedule.html">Расписание</a></li>
-              <li><a href="tickets.html">Купить билеты</a></li>
-              <li><a href="https://www.kinopoisk.ru/" target="_blank">Трансляция на КионоПоиске</a></li>
-              <li><a href="shop.html">Магазин</a></li>
-              <li><a href="#top">К началу страницы</a></li>
+        <div id="dynamo" class="team-card">
+            <a href="https://t.me/dynamo_ru" target="_blank">
+                <img src="Динамо.jpg" alt="Эмблема Динамо" class="team-logo">
+            </a>
+            <a href="https://t.me/dynamo_ru" target="_blank">
+                <h2>Динамо</h2>
+            </a>
+            <ul>
+                <li>Адамчук Кирилл 44, защитник</li>
+                <li>Буруянов Никита 20, нападающий</li>
+                <li>Готовец Кирилл 41, защитник</li>
+                <li>Гусев Никита 97, нападающий</li>
+                <li>Гуськов Матвей 37, нападающий</li>
+                <li>Джиошвили Максим 7, нападающий</li>
+                <li>Ильенко Артём 34, нападающий</li>
+                <li>Комтуа Максим 10, нападающий</li>
+                <li>Кудашов Артём 23, защитник</li>
+                <li>Кудрявцев Павел 84, защитник</li>
+                <li>Менелл Бреннан 27, защитник</li>
+                <li>Миска Хантер 35, вратарь</li>
+                <li>Михеев Артём 13, нападающий</li>
+                <li>Моторыгин Максим 99, вратарь</li>
+                <li>О'Дэлл Эрик 19, нападающий</li>
+                <li>Ожиганов Игорь 92, защитник</li>
+                <li>Пакетт Седрик 18, нападающий</li>
+                <li>Пыленков Даниил 45, защитник</li>
+                <li>Рашевский Дмитрий 96, нападающий</li>
+                <li>Римашевский Егор 87, нападающий</li>
+                <li>Сергеев Егор 93, защитник</li>
+                <li>Сизов Антон 36, защитник</li>
+                <li>Уил Джордан 91, нападающий</li>
+                <li>Ханин Макар 86, нападающий</li>
+                <li>Швец-Роговой Артём 57, нападающий</li>
+                <li>Кудашов Алексей Николаевич, главный тренер</li>
             </ul>
-          </div>
+        </div>
+
+        <!-- Нижняя навигация -->
+        <div class="bottom-navigation">
+            <a href="#top" class="btn btn-primary">На начало страницы</a>
+            <a href="index.html" class="btn btn-secondary">Главная</a>
+            <a href="schedule.html" class="btn btn-secondary">Расписание</a>
+            <a href="tickets.html" class="btn btn-secondary">Купить билеты</a>
+            <a href="shop.html" class="btn btn-secondary">Товары</a>
+        </div>
     </main>
-    
-    <footer>
+
+    <footer class="text-center text-white py-3" style="background-color: blue;">
         <p>© 2024 Хоккейный турнир "Победа" — Все права защищены</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
