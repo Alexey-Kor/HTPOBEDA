@@ -28,19 +28,7 @@ main {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column; 
-        align-items: center;
-    }
-    .main-image {
-        width: 100%; 
 
-    .info-text {
-        width: 100%;
-    }
-}
-}
 .info-text h2 {
     font-size: 24px;
     color: red;
@@ -334,44 +322,6 @@ table {
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li a {
-        padding: 15px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    .team-roster {
-        font-size: 0.9em;
-    }
-}
-
-
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .team-logo {
-        max-width: 90%;
-    }
-
-    .team h2 {
-        font-size: 1.2em;
-    }
-
-    .team-roster {
-        font-size: 0.8em;
-    }
-}
 
 .content-container {
     display: flex;
@@ -389,36 +339,6 @@ table {
     padding-left: 20px;
 }
 
-
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .info-text h2 {
-        font-size: 1.5rem;
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
-}
 
 h1, h2 {
     text-align: center;
@@ -483,51 +403,6 @@ h1, h2 {
 }
 
 
-@media (max-width: 768px) {
-    .matches-and-image {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .match-list-container,
-    .sidebar {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .standings-table {
-        font-size: 14px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .standings-table img {
-        display: none;
-    }
-
-    .standings-table th,
-    .standings-table td {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    footer {
-        font-size: 12px;
-    }
-}
 
 .ticket-form, .feedback-form {
     max-width: 600px;
@@ -575,7 +450,6 @@ h1, h2 {
     background-color: blue;
 }
 
-/* Список навигации */
 .navigation-container {
     margin: 20px;
     text-align: center;
@@ -590,53 +464,6 @@ h1, h2 {
     margin: 10px 0;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .ticket-form, .feedback-form {
-        padding: 15px;
-    }
-
-    .ticket-form button,
-    .feedback-form button {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    nav ul li a {
-        padding: 8px 10px;
-    }
-
-    .ticket-form label,
-    .feedback-form label {
-        font-size: 14px;
-    }
-
-    .ticket-form input,
-    .feedback-form input,
-    .ticket-form select,
-    .feedback-form select,
-    .feedback-form textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    footer {
-        font-size: 12px;
-    }
-}
 
 nav ul {
     display: flex;
@@ -725,44 +552,112 @@ footer {
     padding: 10px 0;
 }
 
-@media (max-width: 768px) {
-    .products-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-    }
 
-    .product {
-        padding: 10px;
-    }
-
-    .cart-btn {
-        width: 90%;
-    }
+/* Стиль для кнопки поиска */
+.search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-@media (max-width: 576px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .products-container {
-        grid-template-columns: 1fr;
-    }
-
-    .product {
-        padding: 8px;
-    }
-
-    .cart-btn {
-        width: 100%;
-    }
+.search-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
+
+/* Стиль для сортировки */
+#sortSelect {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sortSelect:hover {
+    background-color: #e2e6ea;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 60%;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+}
+
+.search-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+.interactive-table th {
+    background-color: #0044cc;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #0044cc;
+}
+
+.interactive-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: font-size 0.3s ease; /* Плавное увеличение текста */
+}
+
+.interactive-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.interactive-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.interactive-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.interactive-table tbody tr:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.02); /* Лёгкое масштабирование строки */
+}
+
+.interactive-table tbody tr:hover td {
+    font-size: 20px; /* Более заметное увеличение текста */
+    font-weight: bold;
+}
+
